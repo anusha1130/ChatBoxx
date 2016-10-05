@@ -35,7 +35,7 @@
 					<th>Forum Name</th>
 					<th>Forum Description</th>
 					<sec:authorize access="isAuthenticated()">
-						<th>Delete Forum</th>
+						 <th>Delete Forum</th> 
 					</sec:authorize>
 				</tr>
 			</thead>

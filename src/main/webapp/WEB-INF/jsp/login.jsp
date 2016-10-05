@@ -13,7 +13,7 @@
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/AngularControllers/Home.js"></script>
 
-<body>
+<body >
 
 <nav class="navbar navbar-default navbar-inverse" role="navigation">
   <div class="container-fluid">

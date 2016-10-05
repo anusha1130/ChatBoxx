@@ -30,8 +30,8 @@ public class ForumCommentsServiceImpl implements ForumCommentsService {
 
 
 	@Override
-	public String getAllComments() {
-	List<ForumComments> list= forumCommentsDAO.getComments();
+	public String getAllComments(int fid) {
+	List<ForumComments> list= forumCommentsDAO.getComments(fid);
 	Gson gson=new Gson();
 	String data=gson.toJson(list);
 	return data;

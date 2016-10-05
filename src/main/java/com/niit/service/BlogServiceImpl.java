@@ -49,4 +49,8 @@ public class BlogServiceImpl implements BlogService{
 	{
 		 return blogDAO.getBlog(blogid);
 	}
+	public List<Blog> getSingleBlog(int blogid)
+	{
+		return blogDAO.getIndividualForum(blogid);
+	}
 }

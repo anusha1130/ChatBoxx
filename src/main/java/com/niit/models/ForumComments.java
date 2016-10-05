@@ -55,8 +55,8 @@ public class ForumComments {
 		return commenttime;
 	}
 
-	public void setCommenttime(Date commenttime) {
-		this.commenttime = commenttime;
+	public void setCommenttime(Date string) {
+		this.commenttime = string;
 	}
 
 }

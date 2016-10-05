@@ -42,11 +42,12 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<!-- <th>Forum ID</th> -->
-					<th>Forum Name</th>
-					<th>Forum Description</th>
+					 <th>Forum Description</th> 
+					<th>Forum Time</th>
+					<!-- <th>Forum Time</th> -->
 					<sec:authorize access="isAuthenticated()">
-						<th>Delete Forum</th>
+					
+					
 					</sec:authorize>
 				</tr>
 			</thead>
