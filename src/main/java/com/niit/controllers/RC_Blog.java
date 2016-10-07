@@ -45,4 +45,10 @@ public class RC_Blog {
 		Blog blog=blogService.editBlog(blogid);
 		return new ResponseEntity<Blog>(blog, HttpStatus.OK);
 	}
+	@GetMapping("/blogAccess")
+	public Boolean blogAccess()
+	{
+		return false;
+		
+	}
 }

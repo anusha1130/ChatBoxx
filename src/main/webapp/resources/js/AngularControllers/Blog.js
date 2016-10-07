@@ -1,4 +1,6 @@
 app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
+	var BASE_URL = 'http://localhost:8081/ChatBoxx';
+	$scope.userid=document.getElementById("userid").value;
 	
 	$scope.submit = function() {
 		var BASE_URL = 'http://localhost:8081/ChatBoxx';
@@ -59,6 +61,19 @@ app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
+	$scope.accessBlog = function(b_userid) {
+		if($scope.userid==b_userid)
+			{
+			console.log($scope.userid);
+			return true;
+			console.log("true")
+			}
+		else
+			{
+			 return false;
+			 console.log("false")
+			}
+	}
 }]);
 
 

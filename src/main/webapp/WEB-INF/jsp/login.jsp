@@ -222,6 +222,12 @@
 				</c:import>
 			</div>
 		</c:when>
+		<c:when test="${IndividualBlog}">
+			<div class="container">
+				<c:import url="/WEB-INF/jsp/IndividualBlog.jsp">
+				</c:import>
+			</div>
+		</c:when>
 		<c:when test="${ChatClicked}">
 			<div class="container">
 				<c:import url="/WEB-INF/jsp/Chat.jsp">

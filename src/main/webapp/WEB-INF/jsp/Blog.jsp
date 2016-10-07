@@ -29,32 +29,52 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>Blog ID</th>
+					<!-- <th>Blog ID</th> -->
 					<th>Blog Name</th>
 					<th>Blog Description</th>
-					<sec:authorize access="isAuthenticated()">   
-						<th>Delete Blog</th>
-						<th>Edit Blog</th>
+					<th>View Blog</th>
+					<sec:authorize access="isAuthenticated()">
+					<th>Delete/Edit</th>
 					</sec:authorize>
 				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="blog in blogs">
-					<td>{{blog.bid}}</td>
+					<!-- <td>{{blog.bid}}</td> -->
 					<td>{{blog.blogName}}</td>
 					<td>{{blog.blogDesc}}</td>
-					<sec:authorize access="isAuthenticated()">
-						<td><button data-ng-click="deleteBlog(blog.bid)"
+					<td width="20%"><a href="blog/{{blog.bid}}" class="btn btn-primary btn-xs">View</a></td>
+					
+							<sec:authorize access="isAuthenticated()">
+							<div data-ng-if="accessBlog(blog.b_userid)">
+				
+				<td data-ng-show="accessBlog(blog.b_userid)">
+				<a class="btn btn-primary btn-xs"
+				    data-ng-click="deleteBlog(blog.bid)">Delete</a>
+				    
+				<a class="btn btn-primary btn-xs"
+				    data-ng-click="editBlog(blog.bid)">Edit</a>
+				
+				</td>
+				</sec:authorize>
+				
+						<%-- <td><button data-ng-click="deleteBlog(blog.bid)"
 								class="btn btn-xs  btn-block btn-danger">Delete</button></td>
 						<td><button data-ng-click="editBlog(blog.bid)"
 								class="btn btn-xs  btn-block btn-info">Edit</button></td>
-					</sec:authorize>
+								</div>
+						</sec:authorize>
+						</div> --%>
+					
+					<!-- <td width="5%"><a href="blog/{{blog.bid}}" class="btn btn-primary btn-xs">View</a></td>
+		 -->
 				</tr>
 			</tbody>
 		</table>
+
 	</div>
 	
-	<script
-		src="${pageContext.request.contextPath}/resources/js/AngularControllers/Blog.js"></script>
+	<input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
+	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Blog.js"></script>
 </div>
 
