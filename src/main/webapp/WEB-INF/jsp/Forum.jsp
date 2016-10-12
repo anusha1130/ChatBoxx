@@ -64,8 +64,7 @@
 	
 <input type="text" value="${sessionScope.userid}"  id="userid" hidden="true" />
 </div>
-<script 
-src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
+
 <input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
 <script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
 </div>

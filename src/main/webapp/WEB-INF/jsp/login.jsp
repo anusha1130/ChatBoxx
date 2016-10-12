@@ -35,6 +35,7 @@
 					  <li><a style="color: white">Hello  <b><sec:authentication property="principal.username" /></b></a></li>
 						<li><a href="perform_logout">Logout</a></sec:authorize>
 						
+						
 						<li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
 					<li><a href="${pageContext.request.contextPath}/forum">Forum</a></li>
 					<li><a href="${pageContext.request.contextPath}/chat">Chat</a></li>
@@ -61,7 +62,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>  -->
       <ul class="nav navbar-nav navbar-right">
-      		
+      		<sec:authorize access="!isAuthenticated()">
         <li><p class="navbar-text">Already have an account?</p></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
@@ -107,10 +108,11 @@
 							</div>
 					 </div>
 				</li>
+				</sec:authorize>
 			</ul>
         </li>
        
-        <ul class="nav navbar-nav navbar-center">
+        <ul class="nav navbar-nav navbar-center"><sec:authorize access="!isAuthenticated()">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Register</b> <span class="caret"></span></a>
 			<ul id="login-dp" class="dropdown-menu">
@@ -176,7 +178,9 @@
 				</li>
 			</ul>
         </li>
+        </sec:authorize>
       </ul>
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -234,6 +238,14 @@
 				</c:import>
 			</div>
 		</c:when>
+		<c:otherwise>
+			<sec:authorize access="hasRole('ROLE_USER')">
+				<div class="container">
+					<c:import url="/WEB-INF/jsp/Body.jsp">
+					</c:import>
+				</div>
+			</sec:authorize>
+			</c:otherwise>
 	</c:choose>
 	
 <Footer><%@include file="/WEB-INF/includes/Foot.jsp"%></Footer>

@@ -1,14 +1,13 @@
 app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 	var BASE_URL = 'http://localhost:8081/ChatBoxx';
 	$scope.userid=document.getElementById("userid").value;
-	
 	$scope.submit = function() {
 		var BASE_URL = 'http://localhost:8081/ChatBoxx';
 		$scope.forum = {	
 			fid       : $scope.forumid,
 			forumName : $scope.forumName,
 			forumDesc : $scope.forumDesc,
-		}
+		}	
 		$http({
 			method : 'POST',
 			url : BASE_URL +'/CreateForum',
@@ -71,20 +70,21 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
-	$scope.accessForum = function(f_userid) {
-		if($scope.userid==f_userid)
+	$scope.accessForum = function(f_userid){
+		if($scope.useid==f_userid)
 			{
-			console.log($scope.userid);
+			console.log(scope.userid);
 			return true;
 			console.log("true");
 			}
 		else
 			{
-			 return false;
-			 console.log("true");
+			return false;
+			console.log("true");
 			}
-	}
+			}
 	
+
 }]);
 
 
