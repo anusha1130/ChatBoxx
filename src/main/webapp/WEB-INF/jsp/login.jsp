@@ -15,30 +15,29 @@
 
 <body >
 
-<nav class="navbar navbar-default navbar-inverse" role="navigation">
+<nav class="navbar navbar-dark bg-primary navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">C H A T B O X</a>
+       
+   
+      <a class="navbar-brand" href="#" style="color:white;font-family:snap ITC">C H A T B O X</a>
+       <i class="fa fa-contao" style="font-size:48px;color:red"></i>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+    
+      
       <sec:authorize access="isAuthenticated()">
 					  <li><a style="color: white">Hello  <b><sec:authentication property="principal.username" /></b></a></li>
-						<li><a href="perform_logout">Logout</a></sec:authorize>
+						<li><a href="${pageContext.request.contextPath}/perform_logout" style="color:white;">Logout</a></sec:authorize>
 						
 						
-						<li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
-					<li><a href="${pageContext.request.contextPath}/forum">Forum</a></li>
-					<li><a href="${pageContext.request.contextPath}/chat">Chat</a></li>
+						<li><a href="${pageContext.request.contextPath}/blog" style="color:white;">Blog</a></li>
+					<li><a href="${pageContext.request.contextPath}/forum" style="color:white;">Forum</a></li>
+					<li><a href="${pageContext.request.contextPath}/chat" style="color:white;">Chat</a></li></ul>
          <!-- <li><a href="#">Blog</a></li>
         <li><a href="#">Forum</a></li>
         <li><a href="#">Chat</a></li>  -->
@@ -65,7 +64,7 @@
       		<sec:authorize access="!isAuthenticated()">
         <li><p class="navbar-text">Already have an account?</p></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white;"><b>Login</b> <span class="caret"></span></a>
 			<ul id="login-dp" class="dropdown-menu">
 				<li>
 				<!-- <form action="perform_login" method="post"> -->
@@ -74,7 +73,7 @@
 					  <form action="perform_login" method="post"><!-- <span
 								class="glyphicon glyphicon-log-out"></span></a></li>
 					   -->
-							<div class="col-md-12">
+							<div class="col-md-12" style="color:black;">
 								Login via
 								<div class="social-buttons">
 									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
@@ -96,15 +95,15 @@
 										<div class="form-group">
 											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
 										</div>
-										<div class="checkbox">
+										<div class="checkbox" style="color:black;">
 											 <label>
 											 <input type="checkbox"> keep me logged-in
 											 </label>
 										</div>
 								 </form>
 							</div>
-							<div class="bottom text-center">
-								New here ? <a href="#"><b>Join Us</b></a>
+							<div class="bottom text-center" style="color:black;">
+								New here ? <a href="#" ><b>Join Us</b></a>
 							</div>
 					 </div>
 				</li>
@@ -114,11 +113,11 @@
        
         <ul class="nav navbar-nav navbar-center"><sec:authorize access="!isAuthenticated()">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Register</b> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white;"><b>Register</b> <span class="caret"></span></a>
 			<ul id="login-dp" class="dropdown-menu">
 				<li>
 					 <div class="row">
-							<div class="col-md-12">
+							<div class="col-md-12" style="color:black;">
 								Register via
 								<div class="social-buttons">
 									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
@@ -159,7 +158,7 @@
 											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
                                              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
 										</div> -->
-										<p>By clicking Create an account, you agree to our Terms and
+										<p style="color:black;">By clicking Create an account, you agree to our Terms and
 							that you have read our Data Policy, including our Cookie Use.</p>
 										<div class="form-group">
 											 <button type="submit" class="btn btn-primary btn-block">Register</button>

@@ -5,7 +5,7 @@
 
 	<sec:authorize access="isAuthenticated()">
 		<form role="form" data-ng-submit="submit()"
-			data-ng-controller="ForumController">
+			data-ng-controller="ForumController"><br>
 			<h3 align="center">Create Forum</h3>
 			<div class="form-group">
 				<input type="text" class="form-control input-sm"

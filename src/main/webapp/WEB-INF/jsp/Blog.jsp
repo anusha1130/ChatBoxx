@@ -4,7 +4,7 @@
 <div data-ng-controller="BlogController">
 	<sec:authorize access="isAuthenticated()">
 		<form role="form" data-ng-submit="submit()"
-			data-ng-controller="BlogController">
+			data-ng-controller="BlogController"><br>
 			<h3 align="center">Create Blog</h3>
 			<div class="form-group">
 				<input type="text" class="form-control input-sm"
