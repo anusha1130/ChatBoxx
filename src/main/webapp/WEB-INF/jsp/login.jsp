@@ -21,7 +21,7 @@
     <div class="navbar-header">
        
    
-      <a class="navbar-brand" href="#" style="color:white;font-family:snap ITC">C H A T B O X</a>
+      <a class="navbar-brand" href="login" style="color:white;font-family:snap ITC">C H A T B O X</a>
        <i class="fa fa-contao" style="font-size:48px;color:red"></i>
     </div>
 
@@ -76,8 +76,8 @@
 							<div class="col-md-12" style="color:black;">
 								Login via
 								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+									<a href="http://www.facebook.com" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+									<a href="http://twitter.com" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
 								</div>
                                 or
                                 
@@ -120,8 +120,8 @@
 							<div class="col-md-12" style="color:black;">
 								Register via
 								<div class="social-buttons">
-									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+									<a href="http://www.facebook.com" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+									<a href="http://twitter.com" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
 								</div>
                                 or
                                 <form role="form" data-ng-submit="submit()"
@@ -207,6 +207,12 @@
 	<%-- <header><%@include file="/WEB-INF/includes/Header.jsp"%></header> --%>
 
 	<c:choose>
+	<c:when test="${loginClicked}">
+			<div class="container">
+				<c:import url="/WEB-INF/jsp/login.jsp">
+				</c:import>
+			</div>
+		</c:when>
 		<c:when test="${BlogClicked}">
 			<div class="container">
 				<c:import url="/WEB-INF/jsp/Blog.jsp">

@@ -28,7 +28,7 @@
 	<div data-ng-init="getAllBlogs()">
 		<table class="table table-bordered table-hover">
 			<thead>
-				<tr>
+				<tr><br>
 					<!-- <th>Blog ID</th> -->
 					<th>Blog Name</th>
 					<th>Blog Description</th>
@@ -46,7 +46,7 @@
 					<td width="20%"><a href="blog/{{blog.bid}}" class="btn btn-primary btn-xs">View</a></td>
 					
 							<sec:authorize access="isAuthenticated()">
-							<div data-ng-if="accessBlog(blog.b_userid)">
+							<div data-ng-if="accessBlog(blog.b_userid)"><br>
 				
 				<td data-ng-show="accessBlog(blog.b_userid)">
 				<a class="btn btn-primary btn-xs"

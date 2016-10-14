@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!-- <div data-ng-controller="IndividualBlog"> -->
-<div>
+<br><br><div>
 	<div style="margin-top: 20px";border: 5px;border-color:blue">
 		<c:if test="${!empty blogList}">
 			<c:forEach items="${blogList}" var="blog">

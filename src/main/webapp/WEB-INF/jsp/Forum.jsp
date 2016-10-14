@@ -30,7 +30,7 @@
 	<div data-ng-init="getAllForums()">
 		<table class="table table-bordered table-hover">
 			<thead>
-				<tr>
+				<tr><br>
 					<!-- <th>Forum ID</th> -->
 					<th>Forum Name</th>
 					<th>Forum Description</th>
